@@ -25,7 +25,7 @@
 }
 
 - (void) pay{
-    if ([WXApi isWXAppInstalled]) {
+    if ([WXApi isWXAppInstalled]&&[WXApi isWXAppSupportApi]) {
         PayReq *request = [[PayReq alloc] init];
         
         
@@ -51,7 +51,8 @@
         
         [WXApi sendReq: request];
     }else{
-        NSLog(@"WeChat not available");
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"微信未安装或版本过低" message:@"微信未安装或版本过低" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
     }
 }
 
