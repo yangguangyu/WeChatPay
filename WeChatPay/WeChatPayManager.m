@@ -10,8 +10,6 @@
 
 #import <CommonCrypto/CommonDigest.h>
 
-#import "WXApi.h"
-
 #define WX_partnerId @"10000100"
 #define WX_key @"192006250b4c09247ec02edce69f6a2d"
 
@@ -155,6 +153,36 @@
         //        return @"服务器返回错误";
     }
     return nil;
+}
+
+#pragma mark - WXApiDelegate
+
+-(void)onResp: (BaseResp*)resp{
+    if ([resp isKindOfClass: [PayResp class]]){
+        NSString *alertTitle = @"支付结果";
+        NSString *alertMessage;
+        
+        switch(resp.errCode){
+            case WXSuccess:
+                //成功
+                alertMessage = @"成功";
+                break;
+            case WXErrCodeCommon:
+                //错误
+                alertMessage = @"错误";
+                break;
+            case WXErrCodeUserCancel:
+                //用户取消
+                alertMessage = @"用户取消";
+                break;
+            default:
+                NSLog(@"支付失败，retcode=%d", resp.errCode);
+                break;
+        }
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:alertTitle message:alertMessage delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alertView show];
+    }
 }
 
 @end

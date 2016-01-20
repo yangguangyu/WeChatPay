@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface WeChatPayManager : NSObject
+#import "WXApi.h"
+
+@interface WeChatPayManager : NSObject <WXApiDelegate>
 
 + (instancetype)sharedManager;
 
