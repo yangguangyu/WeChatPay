@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C08B37351C4DE328008EE22C /* WeChatPayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C08B37341C4DE328008EE22C /* WeChatPayManager.m */; };
 		C0B55EBB1C4DCF31005A3B4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B55EBA1C4DCF31005A3B4E /* main.m */; };
 		C0B55EBE1C4DCF31005A3B4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B55EBD1C4DCF31005A3B4E /* AppDelegate.m */; };
 		C0B55EC11C4DCF31005A3B4E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B55EC01C4DCF31005A3B4E /* ViewController.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C08B37331C4DE328008EE22C /* WeChatPayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeChatPayManager.h; sourceTree = "<group>"; };
+		C08B37341C4DE328008EE22C /* WeChatPayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeChatPayManager.m; sourceTree = "<group>"; };
 		C0B55EB61C4DCF31005A3B4E /* WeChatPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeChatPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B55EBA1C4DCF31005A3B4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C0B55EBC1C4DCF31005A3B4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 				C0B55EBD1C4DCF31005A3B4E /* AppDelegate.m */,
 				C0B55EBF1C4DCF31005A3B4E /* ViewController.h */,
 				C0B55EC01C4DCF31005A3B4E /* ViewController.m */,
+				C08B37331C4DE328008EE22C /* WeChatPayManager.h */,
+				C08B37341C4DE328008EE22C /* WeChatPayManager.m */,
 				C0B55EC21C4DCF31005A3B4E /* Main.storyboard */,
 				C0B55EC51C4DCF31005A3B4E /* Assets.xcassets */,
 				C0B55EC71C4DCF31005A3B4E /* LaunchScreen.storyboard */,
@@ -193,6 +198,7 @@
 			files = (
 				C0B55EC11C4DCF31005A3B4E /* ViewController.m in Sources */,
 				C0B55EBE1C4DCF31005A3B4E /* AppDelegate.m in Sources */,
+				C08B37351C4DE328008EE22C /* WeChatPayManager.m in Sources */,
 				C0B55EBB1C4DCF31005A3B4E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

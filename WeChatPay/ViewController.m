@@ -10,6 +10,8 @@
 
 #import "WXApi.h"
 
+#import "WeChatPayManager.h"
+
 @interface ViewController ()
 
 @end
@@ -27,24 +29,17 @@
 }
 
 - (IBAction)weChatPay:(id)sender {
-    PayReq *request = [[PayReq alloc] init];
-    request.partnerId = @"10000100";
-    request.prepayId= @"wx20160119103005b46aa7998c0757063639";
-    request.package = @"Sign=WXPay";
-    request.nonceStr= @"d11e7d48da10c094f0be86f06d733b14";
-    request.timeStamp= 1453170605;
-    request.sign= @"6A9C22F23B31C41448F96894E107940D";
-    [WXApi sendReq: request];
+    [[WeChatPayManager sharedManager] pay];
     
     
-    
-//    appid=wxb4ba3c02aa476ea1
-//    partid=10000100
-//    prepayid=wx20160119103005b46aa7998c0757063639
-//    noncestr=d11e7d48da10c094f0be86f06d733b14
-//    timestamp=1453170605
-//    package=Sign=WXPay
-//    sign=6A9C22F23B31C41448F96894E107940D
+//    PayReq *request = [[PayReq alloc] init];
+//    request.partnerId = @"10000100";
+//    request.prepayId= @"wx20160119103005b46aa7998c0757063639";
+//    request.package = @"Sign=WXPay";
+//    request.nonceStr= @"d11e7d48da10c094f0be86f06d733b14";
+//    request.timeStamp= 1453170605;
+//    request.sign= @"6A9C22F23B31C41448F96894E107940D";
+//    [WXApi sendReq: request];
 }
 
 @end
